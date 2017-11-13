@@ -22,7 +22,7 @@ namespace sonny.Speech
         }
 
         public string SayGoodbye() {
-            return _phrases.GenerateRandomGoodbye() + "Goodbye.";
+            return _phrases.GenerateRandomGoodbye() + " Goodbye.";
         }
     }
 }

@@ -8,6 +8,8 @@ namespace sonnyAI
         public EventHandler Exit;
         public sonny()
         {
+            Thought thought = new Thought();
+            RespondToUser(thought.SayHello());
             RespondToUser("How are you?");
             string input = Console.ReadLine();
             switch (input)
@@ -30,6 +32,9 @@ namespace sonnyAI
             switch (input)
             {
                 case "exit":
+                    Thought thought = new Thought();
+                    RespondToUser(thought.SayGoodbye());
+                    
                     EventArgs eventArgs = new EventArgs();
                     OnExit(eventArgs);
                     break;
@@ -43,8 +48,6 @@ namespace sonnyAI
 
         private void OnExit(EventArgs e)
         {
-            Thought thought = new Thought();
-            RespondToUser(thought.SayGoodbye());
             EventHandler handler = Exit;
             if (handler != null)
             {
@@ -54,7 +57,7 @@ namespace sonnyAI
 
         private void RespondToUser(string response)
         {
-            Console.WriteLine("\n\n\"" + response + "\"");
+            Console.WriteLine("\n\"" + response + "\"");
         }
     }
 }

@@ -42,13 +42,15 @@ namespace consoleapp
             while (IsRunning)
             {
                 string input = Console.ReadLine();
-                
+                _sonny.Listen(input);
+
             }
         }
 
         private static void Exit(Object sender, EventArgs e)
         {
             IsRunning = false;
+            Thread.Sleep(2000);
         }
 
         private static void StartSonny() {
