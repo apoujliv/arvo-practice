@@ -1,0 +1,25 @@
+{
+  "ApplicationSettings": {
+    "MessageQueue": "RabbitMQ",
+    "ApplicationName": "MessageQueue",
+    "EnvironmentLabel": "DevPrime",
+    "Version": ""
+  },
+  "MessageQueueSettings": {
+    "AutoDeleteQueue": "false",
+    "DurableQueue": "true",
+    "Password": "logger",
+    "UserName": "logger",
+    "ExchangeName": "logger",
+    "ExchangeType": "fanout",
+    "ExclusiveQueue": "false",
+    "HostName": "webdev",
+    "QueueName": "error_log",
+    "QueuePortNumber": "5672",
+    "PrefetchCount": "1",
+    "RoutingKey": "",
+    "ContentType": "Json",
+    "NoAck": "",
+    "DeliveryMode": "2"
+  }
+}
